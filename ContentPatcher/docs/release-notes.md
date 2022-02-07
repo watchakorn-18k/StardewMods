@@ -9,6 +9,9 @@ When releasing a format change, don't forget to update the smapi.io/json schema!
 
 
 -->
+## Upcoming release for Stardew Valley 1.6
+* Updated for Stardew Valley 1.6.
+
 ## 1.28.0
 Released 18 August 2022 for SMAPI 3.14.0 or later. See the [release highlights](https://www.patreon.com/posts/70722755).
 
