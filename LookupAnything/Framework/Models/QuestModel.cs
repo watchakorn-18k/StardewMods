@@ -1,8 +1,6 @@
 using System;
 using System.Linq;
 using Netcode;
-using Pathoschild.Stardew.Common;
-using Pathoschild.Stardew.Common.Items.ItemData;
 using StardewValley;
 using StardewValley.Quests;
 using SObject = StardewValley.Object;
@@ -69,7 +67,7 @@ namespace Pathoschild.Stardew.LookupAnything.Framework.Models
             switch (quest)
             {
                 case CraftingQuest required:
-                    return this.IsMatch(item, required.indexToCraft.Value, ItemType.BigCraftable);
+                    return this.IsMatch(item, required.indexToCraft.Value, type: ItemRegistry.type_bigCraftable);
 
                 case ItemDeliveryQuest required:
                     return this.IsMatch(item, required.item.Value);
@@ -138,11 +136,11 @@ namespace Pathoschild.Stardew.LookupAnything.Framework.Models
         /// <param name="item">The item to check.</param>
         /// <param name="id">The expected item ID.</param>
         /// <param name="type">The expected item type.</param>
-        private bool IsMatch(Item? item, int id, ItemType type = ItemType.Object)
+        private bool IsMatch(Item? item, string id, string type = ItemRegistry.type_object)
         {
             return
-                item?.ParentSheetIndex == id
-                && item.GetItemType() == type;
+                item?.ItemId == id
+                && item.TypeDefinitionId == type;
         }
     }
 }
