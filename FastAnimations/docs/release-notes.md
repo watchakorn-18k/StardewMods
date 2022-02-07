@@ -2,6 +2,7 @@
 
 # Release notes
 ## Upcoming release
+* Updated for Stardew Valley 1.6.
 * Added support for horse flute animation.
 * Improved translations. Thanks to ChulkyBow (updated Ukrainian)!
 
