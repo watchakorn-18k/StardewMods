@@ -257,7 +257,7 @@ namespace Pathoschild.Stardew.LookupAnything.Framework.Lookups.Items
                             {
                                 Bundle bundle = this.Reflection.GetField<Bundle>(bundleMenu, "currentPageBundle").GetValue();
                                 var ingredient = bundle.ingredients[i];
-                                var item = ItemRegistry.Create(ingredient.index, ingredient.stack);
+                                var item = ItemRegistry.Create(ingredient.id, ingredient.stack);
                                 item.Quality = ingredient.quality;
                                 return this.BuildSubject(item, ObjectContext.Inventory, null);
                             }
